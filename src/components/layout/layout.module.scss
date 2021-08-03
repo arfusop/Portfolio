@@ -1,0 +1,59 @@
+.Page {
+    background-color: var(--page-background);
+    padding: 1rem;
+}
+
+.SideNav {
+    padding: 3rem 1rem;
+    background-color: var(--side-nav-background);
+    color: white;
+    display: grid;
+    grid-template-rows: 25% 25% 50%;
+    justify-content: center;
+
+    h1 {
+        font-family: 'Indie Flower', cursive;
+        // font-family: 'Lobster', cursive;
+        // font-family: 'Palette Mosaic', cursive;
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+        word-break: break-word;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 1.2rem;
+    }
+
+    .contactLinks {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 1rem;
+
+        svg {
+            font-size: 1.6rem;
+        }
+    }
+
+    .navLink {
+        &:hover {
+            color: var(--side-nav-hover);
+            cursor: pointer;
+        }
+    }
+}
