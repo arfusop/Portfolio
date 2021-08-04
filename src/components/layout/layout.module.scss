@@ -8,7 +8,7 @@
     background-color: var(--side-nav-background);
     color: white;
     display: grid;
-    grid-template-rows: 25% 25% 50%;
+    grid-template-rows: 30% 25% 45%;
     justify-content: center;
 
     h1 {
@@ -21,6 +21,32 @@
     h4 {
         font-size: 1.2rem;
         word-break: break-word;
+    }
+
+    .resumeButton {
+        height: 2rem;
+        width: 7rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.1rem;
+        padding: 0.5rem;
+        cursor: pointer;
+        border-radius: 2%;
+        background-color: var(--side-nav-background) !important;
+        border: 1px solid var(--side-nav-background) !important;
+        color: white !important;
+        box-shadow: none !important;
+        background-image: none !important;
+        :global(.bp3-button-text) {
+            margin-top: 1px !important;
+        }
+        svg {
+            color: white !important;
+        }
+        &:hover {
+            border-color: white !important;
+        }
     }
 
     .info {

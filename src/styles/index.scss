@@ -1,5 +1,7 @@
 @import './reset.scss';
 @import './theme.scss';
+@import '~@blueprintjs/core/lib/css/blueprint.css';
+@import '~@blueprintjs/icons/lib/css/blueprint-icons.css';
 
 body {
     margin: 0;
@@ -19,4 +21,8 @@ main {
     display: grid;
     grid-template-columns: 25% 1fr;
     height: 100%;
+}
+
+.resumeModal {
+    width: 75%;
 }
