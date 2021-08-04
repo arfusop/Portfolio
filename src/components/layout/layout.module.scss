@@ -11,6 +11,15 @@
     grid-template-rows: 30% 25% 45%;
     justify-content: center;
 
+    a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            color: var(--side-nav-hover);
+        }
+    }
+
     h1 {
         font-family: 'Indie Flower', cursive;
         // font-family: 'Lobster', cursive;

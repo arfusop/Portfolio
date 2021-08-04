@@ -23,6 +23,16 @@ main {
     height: 100%;
 }
 
+.bp3-heading > div {
+    display: flex;
+    align-items: center;
+    svg {
+        cursor: pointer;
+    }
+}
+
 .resumeModal {
     width: 75%;
+    background-color: white;
+    max-width: 850px;
 }

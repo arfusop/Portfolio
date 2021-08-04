@@ -1,21 +1,29 @@
 import React, { useState } from 'react'
-import { Button, Dialog } from '@blueprintjs/core'
-import {
-    FaEnvelope,
-    FaLinkedin,
-    FaTwitter,
-    FaGithub,
-    FaDiscord
-} from 'react-icons/fa'
+import { Link } from 'react-router-dom'
+import { Button, Dialog, Icon } from '@blueprintjs/core'
+import { FaEnvelope, FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa'
 import styles from './layout.module.scss'
 import ResumeImg from '../../assets/Phil Arfuso’s Resume.jpg'
+import ResumePdf from '../../assets/Phil Arfuso’s Resume.pdf'
 
 const SideNav = () => {
     const [isModalOpen, setIsModalOpen] = useState(false)
+
+    const TitleNode = (
+        <div>
+            <Icon
+                icon="download"
+                onClick={() => window.open(ResumePdf, '_blank', 'noreferrer')}
+            />{' '}
+            Resume
+        </div>
+    )
     return (
         <nav className={styles.SideNav}>
             <div className={styles.info}>
-                <h1>Phil Arfuso</h1>
+                <h1>
+                    <Link to="/">Phil Arfuso</Link>
+                </h1>
                 <h4>arfusop.dev@gmail.com</h4>
                 <Button
                     icon="document"
@@ -25,30 +33,52 @@ const SideNav = () => {
                 />
             </div>
             <ul className={styles.links}>
-                <li className={styles.navLink}>About</li>
-                <li className={styles.navLink}>Projects</li>
-                <li className={styles.navLink}>Career</li>
+                <li className={styles.navLink}>
+                    <Link to="/about">About</Link>
+                </li>
+                <li className={styles.navLink}>
+                    <Link to="projects">Projects</Link>
+                </li>
+                <li className={styles.navLink}>
+                    <Link to="career">Career</Link>
+                </li>
             </ul>
             <ul className={styles.contactLinks}>
                 <li className={styles.navLink}>
-                    <FaGithub title="My GitHub" />
+                    <a
+                        href="https://github.com/arfusop"
+                        target="_blank"
+                        rel="noreferrer">
+                        <FaGithub title="My GitHub" />
+                    </a>
                 </li>
                 <li className={styles.navLink}>
-                    <FaLinkedin title="My LinkedIn" />
+                    <a
+                        href="www.linkedin.com/in/phil-arfuso"
+                        target="_blank"
+                        rel="noreferrer">
+                        <FaLinkedin title="My LinkedIn" />
+                    </a>
                 </li>
                 <li className={styles.navLink}>
-                    <FaTwitter title="My Twitter" />
+                    <a
+                        href="https://twitter.com/Phil_Arfuso"
+                        target="_blank"
+                        rel="noreferrer">
+                        <FaTwitter title="My Twitter" />
+                    </a>
                 </li>
-                <li className={styles.navLink}>
+                {/* <li className={styles.navLink}>
                     <FaDiscord title="My Discord" />
-                </li>
+                </li> */}
                 <li className={styles.navLink}>
-                    <FaEnvelope title="Email Me" />
+                    <a href="mailto:arfusop.dev@gmail.com">
+                        <FaEnvelope title="Email Me" />
+                    </a>
                 </li>
                 <Dialog
-                    icon="document"
                     onClose={() => setIsModalOpen(false)}
-                    title="My Resume"
+                    title={TitleNode}
                     isOpen={isModalOpen}
                     className="resumeModal">
                     <img src={ResumeImg} alt="resume" />
