@@ -1,7 +1,6 @@
 @import './reset.scss';
 @import './theme.scss';
-@import '~@blueprintjs/core/lib/css/blueprint.css';
-@import '~@blueprintjs/icons/lib/css/blueprint-icons.css';
+@import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 
 body {
     margin: 0;
@@ -16,23 +15,28 @@ body {
 #root {
     height: 100vh;
 }
-
 main {
+    height: inherit;
     display: grid;
-    grid-template-columns: 25% 1fr;
-    height: 100%;
-}
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr;
 
-.bp3-heading > div {
-    display: flex;
-    align-items: center;
-    svg {
-        cursor: pointer;
+    @media screen and (max-width: 950px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 30% auto;
     }
 }
 
+a {
+    color: unset;
+}
+
 .resumeModal {
-    width: 75%;
     background-color: white;
     max-width: 850px;
+    padding-bottom: 0;
+
+    img {
+        width: 100%;
+    }
 }
