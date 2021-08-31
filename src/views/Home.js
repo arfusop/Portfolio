@@ -8,13 +8,13 @@ import styles from './views.module.scss'
 
 const Home = () => {
     return (
-        <Page>
-            <section className={styles.Home}>
-                <Projects />
-                <Career />
-                <Footer />
-            </section>
-        </Page>
+        // <Page>
+        <section className={styles.Home}>
+            <Projects />
+            <Career />
+            <Footer />
+        </section>
+        // </Page>
     )
 }
 

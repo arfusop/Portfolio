@@ -1,11 +1,6 @@
 import React, { useState } from 'react'
-import {
-    GithubOutlined,
-    LinkedinOutlined,
-    TwitterOutlined,
-    FileTextFilled,
-    DownloadOutlined
-} from '@ant-design/icons'
+import { DownloadOutlined } from '@ant-design/icons'
+import { FaGithub, FaLinkedinIn, FaTwitter, FaFileAlt } from 'react-icons/fa'
 import { Button, Modal, Image } from 'antd'
 
 import ResumePdf from '../../assets/Phil Arfuso’s Resume.pdf'
@@ -47,22 +42,22 @@ const SideNav = () => {
                     href="https://github.com/arfusop"
                     target="_blank"
                     rel="noreferrer">
-                    <GithubOutlined title="GitHub" />
+                    <FaGithub title="GitHub" />
                 </a>
                 <a
                     href="www.linkedin.com/in/phil-arfuso"
                     target="_blank"
                     rel="noreferrer">
-                    <LinkedinOutlined title="LinkedIn" />
+                    <FaLinkedinIn title="LinkedIn" />
                 </a>
                 <a
                     href="https://twitter.com/Phil_Arfuso"
                     target="_blank"
                     rel="noreferrer">
                     {' '}
-                    <TwitterOutlined title="Twitter" />
+                    <FaTwitter title="Twitter" />
                 </a>
-                <FileTextFilled
+                <FaFileAlt
                     onClick={() => {
                         console.log('wtf')
                         setIsModalOpen(true)
