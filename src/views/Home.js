@@ -1,5 +1,4 @@
 import React from 'react'
-import Page from '../components/layout/Page'
 import Footer from '../components/layout/Footer'
 import Projects from './Projects'
 import Career from './Career'
