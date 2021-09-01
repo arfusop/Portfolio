@@ -1,7 +1,8 @@
 import React from 'react'
 import { Timeline, Popover } from 'antd'
 
-import styles from './views.module.scss'
+import MarketView from './MarketView'
+import styles from './Career.module.scss'
 
 const Career = () => {
     return (
@@ -10,11 +11,12 @@ const Career = () => {
             <Timeline>
                 <Popover
                     placement="topLeft"
-                    content={`Things I did here`}
+                    content={MarketView}
                     title="MarketView Research (March 2014 - February 2018)">
-                    <Timeline.Item>First Job</Timeline.Item>
+                    <Timeline.Item>MarketView Research</Timeline.Item>
                 </Popover>
-                <Timeline.Item>Second Job</Timeline.Item>
+                <Timeline.Item>Rutgers Coding Bootcamp</Timeline.Item>
+                <Timeline.Item>EarthCam Inc.</Timeline.Item>
                 <Timeline.Item>MEMX</Timeline.Item>
             </Timeline>
         </section>
