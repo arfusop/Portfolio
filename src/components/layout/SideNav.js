@@ -24,13 +24,13 @@ const SideNav = () => {
             <h1>
                 Developer.
                 <br />
-                Thinker.
+                <span>Thinker.</span>
                 <br />
                 Problem Solver.
                 <br />
-                Cycler.
+                <span>Gamer.</span>
                 <br />
-                Gamer.
+                Cycler.
             </h1>
             <p>
                 Currently working <a href="https://memx.com/">@ MEMX</a>.
@@ -45,7 +45,7 @@ const SideNav = () => {
                     <FaGithub title="GitHub" />
                 </a>
                 <a
-                    href="www.linkedin.com/in/phil-arfuso"
+                    href="https://www.linkedin.com/in/phil-arfuso"
                     target="_blank"
                     rel="noreferrer">
                     <FaLinkedinIn title="LinkedIn" />
