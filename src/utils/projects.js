@@ -1,5 +1,11 @@
-import { FaCcStripe, FaNodeJs, FaReact, FaGoogle } from 'react-icons/fa'
-import { FcCalendar } from 'react-icons/fc'
+import {
+    FaCcStripe,
+    FaNodeJs,
+    FaReact,
+    FaGoogle,
+    FaCalendar
+} from 'react-icons/fa'
+// import { FcCalendar } from 'react-icons/fc'
 import { GrGraphQl } from 'react-icons/gr'
 import { DiMongodb } from 'react-icons/di'
 import { TiWeatherStormy } from 'react-icons/ti'
@@ -8,7 +14,7 @@ export const PROJECTS = [
     {
         title: 'Model Insights',
         description:
-            'Portfolio website for a fashion model, showcasing her work & offering zoom consultations to potential customers interested in working with/learning from her.',
+            'Portfolio website for a fashion model, showcasing her work & offering zoom consultations to potential customers. Custom CMS & Backend designed to cater to this websites needs.',
         tech: [
             {
                 title: 'Stripe',
@@ -16,7 +22,7 @@ export const PROJECTS = [
             },
             {
                 title: 'Calendly',
-                Icon: <FcCalendar key="Calendly" title="Calendly" />
+                Icon: <FaCalendar key="Calendly" title="Calendly" />
             },
             {
                 title: 'GraphQL',

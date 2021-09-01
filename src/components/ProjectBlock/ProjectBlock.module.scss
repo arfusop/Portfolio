@@ -1,6 +1,5 @@
 .ProjectBlock {
     width: 100%;
-    min-height: 80vh;
     display: flex;
     flex-direction: column;
     grid-gap: 1rem;
@@ -8,19 +7,27 @@
     color: white;
 
     &:nth-of-type(1) {
-        background-color: #ff6f24;
+        background-color: #22577a;
     }
     &:nth-of-type(2) {
-        background-color: #3a3a3a;
+        background-color: #38a3a5;
     }
     &:nth-of-type(3) {
-        background-color: #ff3c30;
+        background-color: #57cc99;
+    }
+    &:nth-of-type(4) {
+        background-color: var(--charcoal);
     }
 
     h4 {
         color: white;
+        font-size: 1.5rem;
     }
 
+    p {
+        font-size: 1.2rem;
+        line-height: 26px;
+    }
     .zoomOverImage {
         text-align: center;
         overflow: hidden; /* [1.2] Hide the overflowing of child elements */
@@ -37,5 +44,19 @@
     .footer {
         display: flex;
         justify-content: space-between;
+
+        .techStack {
+            display: flex;
+            grid-gap: 1rem;
+            font-size: 1.8rem;
+
+            svg:hover {
+                color: var(--light-blue);
+            }
+        }
+
+        a {
+            font-size: 1.5rem;
+        }
     }
 }
