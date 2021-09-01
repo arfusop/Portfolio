@@ -1,7 +1,13 @@
 import React from 'react'
+import styles from './layout.module.scss'
 
 const Footer = () => {
-    return <div>Footer goes here</div>
+    const currentYear = new Date().getFullYear()
+    return (
+        <footer className={styles.Footer}>
+            &copy; {currentYear} Phil Arfuso
+        </footer>
+    )
 }
 
 export default Footer
