@@ -3,14 +3,14 @@
 }
 
 .SideNavigation {
-    // position: fixed;
-    // left: 0px;
-    // top: 0px;
-    // right: 552px;
-    // bottom: 0px;
-    // z-index: 0;
-    // width: 40%;
-    // height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 552px;
+    bottom: 0px;
+    z-index: 0;
+    width: 40%;
+    height: 100%;
     padding: var(--page-margin);
     background-color: #fafafa;
     background-image: -webkit-gradient(
@@ -27,6 +27,10 @@
         font-weight: bold;
         color: var(--charcoal);
         line-height: 38px;
+
+        span {
+            color: var(--light-blue);
+        }
     }
 
     p {
@@ -34,6 +38,14 @@
         margin: 1rem 0;
         line-height: 26px;
         color: var(--charcoal);
+
+        a {
+            color: var(--light-blue);
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
     }
 
     .social {
@@ -41,6 +53,7 @@
         display: flex;
         grid-gap: 0.5rem;
         width: 70%;
+        max-width: 15rem;
         justify-content: space-between;
 
         svg {
@@ -56,6 +69,13 @@
     }
 
     .contactButton {
-        width: 12rem;
+        max-width: 15rem;
+        width: 70%;
+    }
+
+    @media screen and (max-width: 950px) {
+        position: static;
+        width: 100%;
+        padding-left: 65px;
     }
 }

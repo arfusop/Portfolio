@@ -8,7 +8,17 @@
     color: white;
 
     &:nth-of-type(1) {
-        background-color: tomato;
+        background-color: #ff6f24;
+    }
+    &:nth-of-type(2) {
+        background-color: #3a3a3a;
+    }
+    &:nth-of-type(3) {
+        background-color: #ff3c30;
+    }
+
+    h4 {
+        color: white;
     }
 
     .zoomOverImage {

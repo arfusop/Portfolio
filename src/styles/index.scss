@@ -17,14 +17,6 @@ body {
 }
 main {
     height: inherit;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 1fr;
-
-    @media screen and (max-width: 950px) {
-        grid-template-columns: 1fr;
-        grid-template-rows: 30% auto;
-    }
 }
 
 a {
