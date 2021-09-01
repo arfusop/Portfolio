@@ -5,7 +5,7 @@ import { Button, Modal, Image } from 'antd'
 
 import ResumePdf from '../../assets/Phil Arfuso’s Resume.pdf'
 import ResumeJpg from '../../assets/Phil Arfuso’s Resume.jpg'
-import ProfilePic from '../../assets/ProfilePic.jpg'
+// import ProfilePic from '../../assets/ProfilePic.jpg'
 import styles from './layout.module.scss'
 
 const SideNav = () => {
