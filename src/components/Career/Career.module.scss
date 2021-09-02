@@ -8,4 +8,20 @@
         font-size: 1.5rem;
         color: var(--charcoal);
     }
+
+    .job {
+        font-weight: bold;
+    }
+
+    .duration {
+        font-size: 0.75rem;
+        font-weight: bold;
+        color: #796e6e;
+    }
+}
+
+.bootcamp {
+    ul {
+        columns: 2;
+    }
 }
