@@ -3,6 +3,9 @@ import { Timeline, Popover } from 'antd'
 
 import MarketView from './MarketView'
 import Bootcamp from './Bootcamp'
+import EarthcamJr from './EarthcamJr'
+import EarthcamLead from './EarthcamLead'
+import Memx from './Memx'
 import styles from './Career.module.scss'
 
 const Career = () => {
@@ -38,7 +41,7 @@ const Career = () => {
                 </Popover>
                 <Popover
                     placement="topLeft"
-                    content=""
+                    content={EarthcamJr}
                     title="Junior Web Developer">
                     <Timeline.Item>
                         <span className={styles.job}>
@@ -52,7 +55,7 @@ const Career = () => {
                 </Popover>
                 <Popover
                     placement="topLeft"
-                    content=""
+                    content={EarthcamLead}
                     title="Lead Front End Web Developer">
                     <Timeline.Item>
                         <span className={styles.job}>
@@ -66,7 +69,7 @@ const Career = () => {
                 </Popover>
                 <Popover
                     placement="topLeft"
-                    content=""
+                    content={Memx}
                     title="Front End Web Developer">
                     <Timeline.Item>
                         <span className={styles.job}>Members Exchange</span>
