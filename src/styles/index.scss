@@ -25,7 +25,6 @@ a {
 
 .resumeModal {
     background-color: white;
-    max-width: 850px;
     padding-bottom: 0;
 
     img {
@@ -43,4 +42,9 @@ a {
 
 .ant-popover {
     max-width: 50%;
+
+    @media screen and (max-width: 700px) {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
 }
