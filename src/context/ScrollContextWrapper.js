@@ -9,30 +9,31 @@ const ScrollContextWrapper = ({ children }) => {
     const projectsRef = useRef(null)
     const careerRef = useRef(null)
 
-    const [current, setCurrent] = useState('')
+    const [active, setActive] = useState(ABOUT)
 
     const scrollToAbout = () => {
-        setCurrent(ABOUT)
+        setActive(ABOUT)
         aboutRef.current.scrollIntoView({ behavior: 'smooth' })
     }
 
     const scrollToSkills = () => {
-        setCurrent(SKILLS)
+        setActive(SKILLS)
         skillsRef.current.scrollIntoView({ behavior: 'smooth' })
     }
 
     const scrollToProjects = () => {
-        setCurrent(PROJECTS)
+        setActive(PROJECTS)
         projectsRef.current.scrollIntoView({ behavior: 'smooth' })
     }
 
     const scrollToCareer = () => {
-        setCurrent(CAREER)
+        setActive(CAREER)
         careerRef.current.scrollIntoView({ behavior: 'smooth' })
     }
 
     const values = {
-        active: current,
+        active,
+        setActive,
         about: {
             ref: aboutRef,
             scrollTo: scrollToAbout

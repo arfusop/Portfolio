@@ -1,13 +1,18 @@
 import React, { useContext } from 'react'
 
+import { SKILLS } from '../../utils/constants'
 import { ScrollContext } from '../../context/ScrollContextWrapper'
 import styles from './Skills.module.scss'
 
 const Skills = () => {
-    const { skills } = useContext(ScrollContext)
+    const { skills, setActive } = useContext(ScrollContext)
 
     return (
-        <section ref={skills.ref} id="skills" className={styles.Skills}>
+        <section
+            onMouseEnter={() => setActive(SKILLS)}
+            ref={skills.ref}
+            id="skills"
+            className={styles.Skills}>
             SKILLS SECTION
         </section>
     )
