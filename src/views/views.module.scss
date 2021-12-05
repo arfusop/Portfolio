@@ -1,14 +1,7 @@
 .Home {
-    position: static;
-    overflow: visible;
-    width: 60%;
-    max-width: 1200px;
-    margin-left: 40%;
-    float: none;
-    clear: none;
+    overflow: auto;
 
-    @media screen and (max-width: 950px) {
-        width: 100%;
-        margin-left: 0%;
+    .Projects {
+        min-height: 100vh;
     }
 }

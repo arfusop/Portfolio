@@ -1,14 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { Modal, Image } from 'antd'
 import { DownloadOutlined } from '@ant-design/icons'
 import { FaGithub, FaLinkedinIn, FaTwitter, FaFileAlt } from 'react-icons/fa'
-import { Button, Modal, Image } from 'antd'
 
+import { ScrollContext } from '../../context/ScrollContextWrapper'
+import { CAREER, PROJECTS, SKILLS, ABOUT } from '../../utils/constants'
 import ResumePdf from '../../assets/Phil Arfuso’s Resume.pdf'
 import ResumeJpg from '../../assets/Phil Arfuso’s Resume.jpg'
-// import ProfilePic from '../../assets/ProfilePic.jpg'
 import styles from './layout.module.scss'
 
 const SideNav = () => {
+    const { active, projects, skills, about, career } =
+        useContext(ScrollContext)
+
     const [isModalOpen, setIsModalOpen] = useState(false)
 
     const TitleNode = (
@@ -22,23 +26,36 @@ const SideNav = () => {
 
     return (
         <nav className={styles.SideNavigation}>
-            <h1>
-                Developer.
-                <br />
-                <span>Thinker.</span>
-                <br />
-                Problem Solver.
-                <br />
-                <span>Gamer.</span>
-                <br />
-                Cycler.
-            </h1>
-            <p>
-                Currently working <a href="https://memx.com/">@ MEMX</a>.
-                Working on side projects, both for business and pleasure. Take a
-                look around. If you like what you see, let's talk.
-            </p>
-            <div className={styles.social}>
+            <div className={styles.header}>
+                <div className={styles.nameBox}>
+                    <span className={styles.firstName}>Phil</span>
+                    <span className={styles.lastName}>Arfuso</span>
+                </div>
+                <span className={styles.job}>Full Stack Web Developer</span>
+            </div>
+            <ul>
+                <li
+                    className={active === ABOUT ? styles.active : null}
+                    onClick={about.scrollTo}>
+                    About
+                </li>
+                <li
+                    className={active === SKILLS ? styles.active : null}
+                    onClick={skills.scrollTo}>
+                    Skills
+                </li>
+                <li
+                    className={active === PROJECTS ? styles.active : null}
+                    onClick={projects.scrollTo}>
+                    Projects
+                </li>
+                <li
+                    className={active === CAREER ? styles.active : null}
+                    onClick={career.scrollTo}>
+                    Career
+                </li>
+            </ul>
+            <div className={styles.navIcons}>
                 <a
                     href="https://github.com/arfusop"
                     target="_blank"
@@ -65,16 +82,7 @@ const SideNav = () => {
                     }}
                     title="Resume"
                 />
-            </div>
-            <a href="mailto:arfusop.dev@gmail.com">
-                <Button
-                    className={styles.contactButton}
-                    shape="round"
-                    type="primary">
-                    Say Hello
-                </Button>
-            </a>
-            {/* <img src={ProfilePic} alt="profile_pic" />  */}
+            </div>{' '}
             <Modal
                 closable
                 mask

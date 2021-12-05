@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Timeline, Popover } from 'antd'
 
+import { ScrollContext } from '../../context/ScrollContextWrapper'
+import { CAREER } from '../../utils/constants'
 import MarketView from './MarketView'
 import Bootcamp from './Bootcamp'
 import EarthcamJr from './EarthcamJr'
@@ -9,8 +11,13 @@ import Memx from './Memx'
 import styles from './Career.module.scss'
 
 const Career = () => {
+    const { career, setActive } = useContext(ScrollContext)
+
     return (
-        <section className={styles.Career}>
+        <section
+            onMouseEnter={() => setActive(CAREER)}
+            ref={career.ref}
+            className={styles.Career}>
             <h3>Career</h3>
             <Timeline>
                 <Popover

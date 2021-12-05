@@ -1,17 +1,15 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './views/Home'
 import SideNav from './components/layout/SideNav'
+import ScrollContextWrapper from './context/ScrollContextWrapper'
 
 const App = () => {
     return (
         <main>
-            <Router>
+            <ScrollContextWrapper>
                 <SideNav />
-                <Switch>
-                    <Route exact path="/" component={Home} />
-                </Switch>
-            </Router>
+                <Home />
+            </ScrollContextWrapper>
         </main>
     )
 }
