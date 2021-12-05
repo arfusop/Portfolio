@@ -1,15 +1,18 @@
+$asset: '../../assets/mountains.jpg';
+
 .About {
     height: 100%;
     padding: var(--page-margin);
     background-color: var(--secondary-background);
-    // background-image: -webkit-gradient(
-    //     linear,
-    //     left top,
-    //     left bottom,
-    //     from(#fafafa),
-    //     to(#fafafa)
-    // );
-    // background-image: linear-gradient(180deg, #fafafa, #fafafa);
+    // background-image: url($asset);
+    // display: grid;
+    // grid-template-rows: 1fr 1fr 1fr;
+
+    // .intro {
+    //     display: flex;
+    //     justify-content: space-between;
+    //     width: 70vw;
+    // }
 
     h1 {
         font-size: 2rem;
@@ -62,6 +65,12 @@
         max-width: 15rem;
         width: 70%;
     }
+
+    // img {
+    //     height: 25rem;
+    //     border-radius: 10px;
+    //     filter: grayscale(1);
+    // }
 
     @media screen and (max-width: 950px) {
         position: static;

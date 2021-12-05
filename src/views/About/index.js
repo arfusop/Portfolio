@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Button } from 'antd'
 import { ABOUT } from '../../utils/constants'
 import { ScrollContext } from '../../context/ScrollContextWrapper'
+import ProfilePic from '../../assets/ProfilePic.jpg'
 import styles from './About.module.scss'
 
 const About = () => {
@@ -13,6 +14,7 @@ const About = () => {
             ref={about.ref}
             id="about"
             className={styles.About}>
+            {/* <div className={styles.intro}> */}
             <h1>
                 Developer.
                 <br />
@@ -24,6 +26,8 @@ const About = () => {
                 <br />
                 Cycler.
             </h1>
+            {/* <img src={ProfilePic} alt="profile_pic" /> */}
+            {/* </div> */}
             <p>
                 Currently working <a href="https://memx.com/">@ MEMX</a>.
                 Working on side projects, both for business and pleasure. Take a
@@ -37,7 +41,6 @@ const About = () => {
                     Say Hello
                 </Button>
             </a>
-            {/* <img src={ProfilePic} alt="profile_pic" />  */}
         </section>
     )
 }
