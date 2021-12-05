@@ -38,7 +38,8 @@ export const PROJECTS = [
                 Icon: <FaReact key="ReactJS1" title="ReactJS" />
             }
         ],
-        img: 'https://via.placeholder.com/468x500?text=Model Insights',
+        // img: 'https://via.placeholder.com/468x500?text=Model Insights',
+        img: 'https://media.giphy.com/media/3se5KWzcIuoH4XEryy/giphy.gif',
         url: 'www.espn.com'
     },
     {

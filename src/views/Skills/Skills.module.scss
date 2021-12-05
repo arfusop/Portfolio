@@ -1,3 +1,74 @@
 .Skills {
     height: 100vh;
+    padding: 5rem;
+    background-color: var(--secondary-background);
+    border-top: 4px solid var(--main-background);
+    display: grid;
+    grid-template-rows: 4rem 1fr;
+
+    h1 {
+        color: var(--orange);
+        font-size: 3rem;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.3rem;
+
+        svg {
+            font-size: 2rem;
+            margin: 0 0.4rem;
+        }
+    }
+
+    .skillsGrid {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        grid-template-rows: 33% 33%;
+        align-content: space-around;
+        grid-column-gap: 4rem;
+        grid-row-gap: 0;
+    }
+
+    :global(.ant-card) {
+        box-shadow: 0px 11px 34px 2px var(--box-shadow);
+        max-width: 20rem;
+        text-align: center;
+        background-color: black;
+        border-radius: 10px;
+        transition-duration: 0.7s;
+
+        &:hover {
+            box-shadow: unset;
+            transform: translateY(10px);
+        }
+
+        :global(.ant-card-head) {
+            color: var(--base-font-color);
+            font-weight: bolder;
+
+            :global(.ant-card-head-title) {
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 3rem;
+                font-size: 2rem;
+
+                svg {
+                    margin: 0 1rem;
+                }
+            }
+        }
+
+        :global(.ant-card-body) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100% - 48px);
+
+            span {
+                color: var(--base-font-color);
+            }
+        }
+    }
 }
