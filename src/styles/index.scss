@@ -36,16 +36,24 @@ a {
     }
 }
 
-.ant-timeline-item-tail {
-    border-left: 2px solid var(--charcoal);
-}
-
-.ant-popover-title {
-    font-weight: bold;
-}
-
 .ant-popover {
-    max-width: 50%;
+    max-width: 65%;
+    border-radius: var(--border-radius);
+
+    .ant-popover-arrow > span {
+        background-color: var(--accent-background);
+    }
+    .ant-popover-inner {
+        border-radius: var(--border-radius);
+        background-color: var(--accent-background);
+
+        .ant-popover-title,
+        .ant-popover-inner-content {
+            color: var(--primary-text);
+            padding: 1rem;
+            font-weight: bold;
+        }
+    }
 
     @media screen and (max-width: 700px) {
         max-width: 100%;

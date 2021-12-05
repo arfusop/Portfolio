@@ -15,6 +15,7 @@ const Projects = () => {
             ref={projects.ref}
             id="projects"
             className={styles.Projects}>
+            <h1>Projects</h1>
             {PROJECTS.map((project, idx) => {
                 return <ProjectBlock key={idx} {...project} />
             })}
