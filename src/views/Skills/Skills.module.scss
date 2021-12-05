@@ -34,7 +34,7 @@
         max-width: 20rem;
         text-align: center;
         background-color: black;
-        border-radius: 10px;
+        border-radius: var(--rtw);
         transition-duration: 0.7s;
 
         &:hover {

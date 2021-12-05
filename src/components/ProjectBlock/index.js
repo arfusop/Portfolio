@@ -1,30 +1,37 @@
 import React from 'react'
-import { Image } from 'antd'
+import { Image, Carousel } from 'antd'
 import { FaExternalLinkAlt } from 'react-icons/fa'
 
+import DisplayCard from '../Card'
 import styles from './ProjectBlock.module.scss'
 
-const ProjectBlock = ({ index, title, img, description, url, tech }) => {
+const ProjectBlock = ({ index, title, description, url, images }) => {
+    const titleNode = (
+        <a key={'anchor' + index} href={url}>
+            <div className="projectTitle">
+                <h4 key={'h4' + index}>{title}</h4>
+                <FaExternalLinkAlt key={'icon' + index} />
+            </div>
+        </a>
+    )
+
     return (
-        <div className={styles.ProjectBlock} key={index}>
-            <h4 key={'h4' + index}>{title}</h4>
-            <div key={'zoomWrap' + index} className={styles.zoomOverImage}>
-                <Image key={'image' + index} preview={false} src={img} />
+        <DisplayCard className="projectCard" title={titleNode}>
+            <div className={styles.ProjectBlock} key={index}>
+                <Carousel
+                    dots={{ className: 'carouselDots' }}
+                    key={'carousel' + index}
+                    autoplay
+                    effect="fade">
+                    {images.map((image, i) => (
+                        <div className={styles.carouselItem}>
+                            <Image key={'image' + i} src={image} />
+                        </div>
+                    ))}
+                </Carousel>
+                <p key={'description' + index}>{description}</p>
             </div>
-            <p key={'description' + index}>{description}</p>
-            <div key={'footer' + index} className={styles.footer}>
-                <div className={styles.techStack} key={'tech' + index}>
-                    {tech.map(tech => {
-                        return (
-                            <div key={`${tech.title}${index}`}>{tech.Icon}</div>
-                        )
-                    })}
-                </div>
-                <a key={'anchor' + index} href={url}>
-                    <FaExternalLinkAlt key={'icon' + index} />
-                </a>
-            </div>
-        </div>
+        </DisplayCard>
     )
 }
 

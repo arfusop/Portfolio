@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
-import ProjectBlock from '../components/ProjectBlock'
-import { PROJECTS as PROJECTS_VAR } from '../utils/constants'
-import { PROJECTS } from '../utils/projects'
-import { ScrollContext } from '../context/ScrollContextWrapper'
+import ProjectBlock from '../../components/ProjectBlock'
+import { PROJECTS as PROJECTS_VAR } from '../../utils/constants'
+import { PROJECTS } from '../../utils/projects'
+import { ScrollContext } from '../../context/ScrollContextWrapper'
 
-import styles from './views.module.scss'
+import styles from './Projects.module.scss'
 
 const Projects = () => {
     const { projects, setActive } = useContext(ScrollContext)

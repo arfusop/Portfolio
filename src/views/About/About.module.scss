@@ -1,18 +1,15 @@
 $asset: '../../assets/mountains.jpg';
+$ideas: '../../assets/ideas.jpeg';
+$laptop: '../../assets/laptop.jpeg';
 
 .About {
     height: 100%;
     padding: var(--page-margin);
-    background-color: var(--secondary-background);
-    // background-image: url($asset);
-    // display: grid;
-    // grid-template-rows: 1fr 1fr 1fr;
-
-    // .intro {
-    //     display: flex;
-    //     justify-content: space-between;
-    //     width: 70vw;
-    // }
+    background-image: url($laptop);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 
     h1 {
         font-size: 2rem;
@@ -64,13 +61,9 @@ $asset: '../../assets/mountains.jpg';
     .contactButton {
         max-width: 15rem;
         width: 70%;
+        height: 3rem;
+        font-size: 1.5rem;
     }
-
-    // img {
-    //     height: 25rem;
-    //     border-radius: 10px;
-    //     filter: grayscale(1);
-    // }
 
     @media screen and (max-width: 950px) {
         position: static;
