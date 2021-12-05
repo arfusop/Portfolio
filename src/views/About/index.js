@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Button } from 'antd'
 
+import { ScrollContext } from '../../context/ScrollContextWrapper'
 import styles from './About.module.scss'
 
 const About = () => {
+    const { about } = useContext(ScrollContext)
+
     return (
-        <section className={styles.About}>
+        <section ref={about.ref} id="about" className={styles.About}>
             <h1>
                 Developer.
                 <br />
