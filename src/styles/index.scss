@@ -16,28 +16,33 @@ body {
 #root {
     height: 100vh;
 }
+
+.ant-drawer-mask {
+    opacity: 0 !important;
+}
+
+.mobileNavDrawer {
+    height: calc(100% - 2.5rem) !important;
+
+    .ant-drawer-content-wrapper {
+        height: 100% !important;
+
+        .ant-drawer-body {
+            background-color: var(--main-background);
+            color: var(--primary-text);
+        }
+    }
+}
+
 main {
     height: inherit;
     display: grid;
     grid-template-columns: 15rem 1fr;
     grid-template-rows: 100vh;
 
-    #fullNav {
-        display: flex;
-    }
-
-    #sideNav {
-        display: none;
-    }
-
     @media screen and (max-width: 768px) {
-        #fullNav {
-            display: none;
-        }
-
-        #sideNav {
-            display: flex;
-        }
+        grid-template-columns: 1fr;
+        grid-template-rows: 2.5rem 1fr;
     }
 }
 

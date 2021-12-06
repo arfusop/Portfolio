@@ -8,7 +8,7 @@
     gap: 1rem;
 
     h1 {
-        color: var(--orange);
+        color: var(--secondary-accent);
         font-size: 3rem;
         display: flex;
         align-items: center;
@@ -18,7 +18,7 @@
 
     .job {
         font-weight: bold;
-        color: var(--accent);
+        color: var(--primary-accent);
         font-size: 1.5rem;
     }
 
@@ -37,8 +37,8 @@
     :global(.ant-timeline-item-head) {
         height: 1.5rem;
         width: 1.5rem;
-        border-color: var(--yellow);
-        background-color: var(--yellow);
+        border-color: var(--off-accent);
+        background-color: var(--off-accent);
     }
 
     :global(.ant-timeline-item-content) {

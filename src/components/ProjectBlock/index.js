@@ -24,7 +24,7 @@ const ProjectBlock = ({ index, title, description, url, images }) => {
                     autoplay
                     effect="fade">
                     {images.map((image, i) => (
-                        <div className={styles.carouselItem}>
+                        <div className={styles.carouselItem} key={i}>
                             <Image key={'image' + i} src={image} />
                         </div>
                     ))}

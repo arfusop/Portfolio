@@ -20,7 +20,7 @@
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
-            color: var(--accent);
+            color: var(--primary-accent);
             font-weight: bold;
 
             .firstName {
@@ -34,7 +34,7 @@
         .job {
             font-weight: bold;
             font-size: 0.9rem;
-            color: var(--orange);
+            color: var(--secondary-accent);
         }
     }
 
@@ -56,29 +56,13 @@
             }
 
             &:hover {
-                color: var(--orange);
+                color: var(--secondary-accent);
                 cursor: pointer;
             }
         }
 
         .active {
-            color: var(--accent);
-        }
-    }
-
-    .themeToggle {
-        height: 1.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        :global(.ant-switch-inner) {
-            display: flex;
-            align-items: center;
-
-            svg {
-                font-size: 1rem;
-            }
+            color: var(--primary-accent);
         }
     }
 
@@ -103,7 +87,7 @@
 
             &:hover {
                 cursor: pointer;
-                color: var(--orange);
+                color: var(--secondary-accent);
             }
         }
     }
@@ -124,14 +108,61 @@
     }
 }
 
-.MobileNav {
+.MobileNavBar {
+    display: flex;
+    width: 100%;
+    padding: 0.7rem;
+    background-color: var(--accent-background);
+    color: var(--primary-accent);
+
+    .header {
+        font-weight: bold;
+        width: calc(100% - 2.5rem);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .name {
+            font-size: 1.2rem;
+        }
+
+        .divider {
+            font-size: 1.2rem;
+            color: var(--off-accent);
+        }
+
+        .job {
+            font-size: 1rem;
+            color: var(--secondary-accent);
+        }
+    }
 }
 
-.Footer {
-    background-color: var(--charcoal);
-    color: white;
-    padding: 1rem;
+.mobileNavDrawerBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        filter: var(--grayscale);
+        border-radius: var(--border-radius);
+        margin: 0 1rem 2rem 1rem;
+        width: 25vw;
+    }
+}
+
+.themeToggle {
+    height: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    :global(.ant-switch-inner) {
+        display: flex;
+        align-items: center;
+
+        svg {
+            font-size: 1rem;
+        }
+    }
 }

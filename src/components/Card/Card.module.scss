@@ -35,7 +35,7 @@
                 background-color: var(--accent-background);
 
                 &:global(.slick-active > button) {
-                    background-color: var(--accent);
+                    background-color: var(--primary-accent);
                 }
             }
         }
