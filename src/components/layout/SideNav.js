@@ -35,7 +35,7 @@ const SideNav = () => {
     )
 
     return (
-        <nav className={styles.SideNavigation}>
+        <nav id="fullNav" className={styles.SideNavigation}>
             <div className={styles.header}>
                 <div className={styles.nameBox}>
                     <span className={styles.firstName}>Phil</span>
