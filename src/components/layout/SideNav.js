@@ -1,8 +1,16 @@
 import React, { useState, useContext } from 'react'
-import { Modal, Image } from 'antd'
+import { Modal, Image, Switch } from 'antd'
 import { DownloadOutlined } from '@ant-design/icons'
-import { FaGithub, FaLinkedinIn, FaTwitter, FaFileAlt } from 'react-icons/fa'
+import {
+    FaGithub,
+    FaLinkedinIn,
+    FaTwitter,
+    FaFileAlt,
+    FaMoon,
+    FaSun
+} from 'react-icons/fa'
 
+import { ThemeContext } from '../../context/ThemeContextWrapper'
 import { ScrollContext } from '../../context/ScrollContextWrapper'
 import { CAREER, PROJECTS, SKILLS, ABOUT } from '../../utils/constants'
 import ResumePdf from '../../assets/Phil Arfuso’s Resume.pdf'
@@ -13,6 +21,7 @@ import styles from './layout.module.scss'
 const SideNav = () => {
     const { active, projects, skills, about, career } =
         useContext(ScrollContext)
+    const { setCurrentTheme, isChecked } = useContext(ThemeContext)
 
     const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -26,13 +35,21 @@ const SideNav = () => {
     )
 
     return (
-        <nav className={styles.SideNavigation}>
+        <nav id="fullNav" className={styles.SideNavigation}>
             <div className={styles.header}>
                 <div className={styles.nameBox}>
                     <span className={styles.firstName}>Phil</span>
                     <span className={styles.lastName}>Arfuso</span>
                 </div>
                 <span className={styles.job}>Full Stack Web Developer</span>
+                <div className={styles.themeToggle}>
+                    <Switch
+                        onChange={setCurrentTheme}
+                        checked={isChecked}
+                        checkedChildren={<FaMoon />}
+                        unCheckedChildren={<FaSun />}
+                    />
+                </div>
             </div>
             <ul>
                 <li

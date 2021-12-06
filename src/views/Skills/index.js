@@ -84,8 +84,8 @@ const Skills = () => {
                     }>
                     <Progress percent={45} type="dashboard" />
                 </Card>
-                <h1>{`})`}</h1>
             </div>
+            <h1>{`})`}</h1>
         </section>
     )
 }

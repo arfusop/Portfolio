@@ -21,6 +21,24 @@ main {
     display: grid;
     grid-template-columns: 15rem 1fr;
     grid-template-rows: 100vh;
+
+    #fullNav {
+        display: flex;
+    }
+
+    #sideNav {
+        display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        #fullNav {
+            display: none;
+        }
+
+        #sideNav {
+            display: flex;
+        }
+    }
 }
 
 a {
