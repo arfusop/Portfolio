@@ -16,28 +16,33 @@ body {
 #root {
     height: 100vh;
 }
+
+.ant-drawer-mask {
+    opacity: 0 !important;
+}
+
+.ant-drawer-open.mobileNavDrawer {
+    height: calc(100% - 5rem) !important;
+
+    .ant-drawer-content-wrapper {
+        height: 100% !important;
+
+        .ant-drawer-body {
+            background-color: var(--main-background);
+            color: var(--primary-text);
+        }
+    }
+}
+
 main {
     height: inherit;
     display: grid;
     grid-template-columns: 15rem 1fr;
     grid-template-rows: 100vh;
 
-    #fullNav {
-        display: flex;
-    }
-
-    #sideNav {
-        display: none;
-    }
-
     @media screen and (max-width: 768px) {
-        #fullNav {
-            display: none;
-        }
-
-        #sideNav {
-            display: flex;
-        }
+        grid-template-columns: 1fr;
+        grid-template-rows: 5rem 1fr;
     }
 }
 
@@ -46,8 +51,24 @@ a {
 }
 
 .resumeModal {
-    background-color: white;
+    // background-color: white;
     padding-bottom: 0;
+
+    svg {
+        color: var(--primary-text);
+    }
+
+    .ant-modal-header {
+        background-color: var(--main-background);
+        .ant-modal-title {
+            color: var(--primary-text);
+        }
+    }
+
+    .ant-modal-body {
+        background-color: var(--main-background);
+        color: var(--primary-text);
+    }
 
     img {
         width: 100%;
@@ -73,8 +94,13 @@ a {
         }
     }
 
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 768px) {
         max-width: 100%;
         padding: 0 1rem;
+
+        .ant-popover-inner-content {
+            max-height: 50vh;
+            overflow: auto;
+        }
     }
 }

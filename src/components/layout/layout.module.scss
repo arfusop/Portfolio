@@ -4,7 +4,7 @@
 
 .SideNavigation {
     background-color: var(--main-background);
-    color: white;
+    color: var(--primary-text);
     display: flex;
     flex-direction: column;
 
@@ -20,7 +20,7 @@
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
-            color: var(--accent);
+            color: var(--primary-accent);
             font-weight: bold;
 
             .firstName {
@@ -34,7 +34,7 @@
         .job {
             font-weight: bold;
             font-size: 0.9rem;
-            color: var(--orange);
+            color: var(--secondary-accent);
         }
     }
 
@@ -56,29 +56,13 @@
             }
 
             &:hover {
-                color: var(--orange);
+                color: var(--secondary-accent);
                 cursor: pointer;
             }
         }
 
         .active {
-            color: var(--accent);
-        }
-    }
-
-    .themeToggle {
-        height: 1.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        :global(.ant-switch-inner) {
-            display: flex;
-            align-items: center;
-
-            svg {
-                font-size: 1rem;
-            }
+            color: var(--primary-accent);
         }
     }
 
@@ -103,7 +87,7 @@
 
             &:hover {
                 cursor: pointer;
-                color: var(--orange);
+                color: var(--secondary-accent);
             }
         }
     }
@@ -124,14 +108,117 @@
     }
 }
 
-.MobileNav {
+.MobileNavBar {
+    display: flex;
+    width: 100%;
+    padding: 0.7rem;
+    background-color: var(--accent-background);
+    color: var(--primary-accent);
+
+    .header {
+        font-weight: bold;
+        width: calc(100% - 2.5rem);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .headerInfo {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            .name {
+                font-size: 1.2rem;
+            }
+
+            .job {
+                font-size: 1rem;
+                color: var(--secondary-accent);
+            }
+        }
+    }
 }
 
-.Footer {
-    background-color: var(--charcoal);
-    color: white;
-    padding: 1rem;
+.mobileNavDrawerBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        li {
+            height: 3rem;
+            width: var(--mobile-nav-element-width);
+            border-top: 1px solid lightgray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+
+            &:last-child {
+                border-bottom: 1px solid lightgray;
+            }
+
+            &:hover {
+                color: var(--secondary-accent);
+                cursor: pointer;
+            }
+        }
+
+        .active {
+            color: var(--primary-accent);
+        }
+    }
+
+    .navIcons {
+        margin: 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1.5rem;
+
+        & > a,
+        > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 4rem;
+        }
+
+        svg {
+            font-size: 3rem;
+            color: var(--primary-text);
+
+            &:hover {
+                cursor: pointer;
+                color: var(--secondary-accent);
+            }
+        }
+    }
+
+    img {
+        filter: var(--grayscale);
+        border-radius: var(--border-radius);
+        margin: 0 1rem 2rem 1rem;
+        width: var(--mobile-nav-element-width);
+    }
+}
+
+.themeToggle {
+    height: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    :global(.ant-switch-inner) {
+        display: flex;
+        align-items: center;
+
+        svg {
+            font-size: 1rem;
+        }
+    }
 }

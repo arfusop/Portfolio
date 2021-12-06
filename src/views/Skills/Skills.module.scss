@@ -1,3 +1,5 @@
+@import '../../styles/mobile-page-styles.scss';
+
 .Skills {
     height: 100vh;
     padding: 5rem;
@@ -7,7 +9,8 @@
     grid-template-rows: 4rem 1fr;
 
     h1 {
-        color: var(--orange);
+        font-weight: bold;
+        color: var(--secondary-accent);
         font-size: 3rem;
         display: flex;
         align-items: center;
@@ -75,6 +78,19 @@
         .skillsGrid {
             grid-template-columns: 47.5% 47.5%;
             grid-template-rows: 30% 30% 30%;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        @include mobilePagePadding;
+        min-height: 100vh;
+        height: unset;
+        width: 100vw;
+
+        .skillsGrid {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, 25vh);
+            grid-gap: 1rem;
         }
     }
 }

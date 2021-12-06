@@ -10,6 +10,7 @@ $laptop: '../../assets/laptop.jpeg';
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    padding: 5rem;
 
     h1 {
         font-size: 2rem;
@@ -18,7 +19,7 @@ $laptop: '../../assets/laptop.jpeg';
         line-height: 38px;
 
         span {
-            color: var(--accent);
+            color: var(--primary-accent);
         }
     }
 
@@ -29,7 +30,7 @@ $laptop: '../../assets/laptop.jpeg';
         color: var(--primary-text);
 
         a {
-            color: var(--accent);
+            color: var(--primary-accent);
 
             &:hover {
                 opacity: 0.7;
@@ -52,7 +53,7 @@ $laptop: '../../assets/laptop.jpeg';
 
             &:hover {
                 cursor: pointer;
-                color: var(--accent);
+                color: var(--primary-accent);
                 opacity: 1;
             }
         }
@@ -71,7 +72,11 @@ $laptop: '../../assets/laptop.jpeg';
         padding-left: 65px;
     }
 
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 768px) {
         padding: var(--mobile-page-margin);
+
+        .contactButton {
+            width: 100%;
+        }
     }
 }

@@ -1,20 +1,17 @@
 :root {
-    --accent: #1890ff;
-    --side-nav-hover: #fb3640;
-    // --charcoal: #4a4a4a;
-    --page-background: #e2e2e2;
-    --page-margin: 6rem;
-    --mobile-page-margin: 2.5rem;
-
-    --accent: #1890ff;
-    --orange: #ff7830;
-    --yellow: #ffda30;
+    --primary-accent: #1890ff;
+    --secondary-accent: #ff7830;
+    --off-accent: #ffda30;
     --border-radius: 10px;
+
+    --mobile-page-margin: 2.5rem;
+    --mobile-nav-element-width: 40vw;
 }
 
 [data-theme='DARK'] {
     --primary-text: #fff;
 
+    --card-backgroound: rgba(22, 22, 22, 70%);
     --accent-background: #161616;
     --main-background: #222222;
     --secondary-background: #2a2a2a;
@@ -23,11 +20,12 @@
     --grayscale: grayscale(100%);
 }
 [data-theme='LIGHT'] {
-    --primary-text: #fff;
+    --primary-text: #0b0b0b;
 
+    --card-backgroound: rgb(169 165 165 / 70%);
     --accent-background: #fff;
     --main-background: darkgray;
-    --secondary-background: #gray;
+    --secondary-background: #dfdfdf;
     --box-shadow: #000;
     --base-font-color: #fff;
     --grayscale: grayscale(0%);

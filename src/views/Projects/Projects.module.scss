@@ -1,3 +1,5 @@
+@import '../../styles/mobile-page-styles.scss';
+
 .Projects {
     min-height: 100vh;
     padding: 5rem;
@@ -8,11 +10,16 @@
     gap: 1rem;
 
     h1 {
-        color: var(--orange);
+        font-weight: bold;
+        color: var(--secondary-accent);
         font-size: 3rem;
         display: flex;
         align-items: center;
         letter-spacing: 0.3rem;
         margin-bottom: 0.5rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        @include mobilePagePadding;
     }
 }
