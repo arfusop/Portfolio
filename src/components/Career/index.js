@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { Timeline, Popover } from 'antd'
 import { FaInfoCircle } from 'react-icons/fa'
 
@@ -14,15 +14,13 @@ import styles from './Career.module.scss'
 const Career = () => {
     const { career, setActive } = useContext(ScrollContext)
 
-    const [activePopover, setActivePopover] = useState('')
-
     return (
         <section
             onMouseEnter={() => setActive(CAREER)}
             ref={career.ref}
             className={styles.Career}>
             <h1>Career</h1>
-            <Timeline>
+            <Timeline mode="left">
                 <Timeline.Item>
                     <div className={styles.timelineItem}>
                         <span className={styles.job}>Members Exchange</span>
