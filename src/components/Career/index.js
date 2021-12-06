@@ -38,7 +38,9 @@ const Career = () => {
                 <Timeline.Item>
                     <div className={styles.timelineItem}>
                         <span className={styles.job}>
-                            EarthCam Inc. - Lead Web Developer
+                            EarthCam Inc.
+                            <br />
+                            Lead Web Developer
                         </span>
                         <Popover
                             content={EarthcamLead}
@@ -54,7 +56,9 @@ const Career = () => {
                 <Timeline.Item>
                     <div className={styles.timelineItem}>
                         <span className={styles.job}>
-                            EarthCam Inc. - Jr. Web Developer
+                            EarthCam Inc.
+                            <br />
+                            Jr. Web Developer
                         </span>
                         <Popover
                             content={EarthcamJr}

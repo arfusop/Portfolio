@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { Drawer } from 'antd'
-import { FaGithub, FaLinkedinIn, FaTwitter, FaFileAlt } from 'react-icons/fa'
+import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
 
+import { ScrollContext } from '../../context/ScrollContextWrapper'
+import { CAREER, PROJECTS, SKILLS, ABOUT } from '../../utils/constants'
 import ProfileEdited from '../../assets/profile-edited-taller.jpg'
 import ResumeModal from './ResumeModal'
 import ThemeSwitch from './ThemeSwitch'
@@ -9,6 +11,9 @@ import Hamburger from '../Hamburger'
 import styles from './layout.module.scss'
 
 const MobileNav = () => {
+    const { active, projects, skills, about, career } =
+        useContext(ScrollContext)
+
     const [visible, setVisible] = useState(false)
 
     const onCloseClick = () => {
@@ -21,12 +26,34 @@ const MobileNav = () => {
         }
     }, [])
 
+    const onNavLinkClick = next => {
+        setVisible(false)
+
+        setTimeout(() => {
+            switch (next) {
+                case ABOUT:
+                    about.scrollTo()
+                    break
+                case SKILLS:
+                    skills.scrollTo()
+                    break
+                case PROJECTS:
+                    projects.scrollTo()
+                    break
+                case CAREER:
+                    career.scrollTo()
+                    break
+                default:
+                    break
+            }
+        }, 200)
+    }
+
     return (
         <nav id="mobileNav" className={styles.MobileNavBar}>
             <div className={styles.header}>
-                <div>
+                <div className={styles.headerInfo}>
                     <span className={styles.name}>Phil Arfuso</span>{' '}
-                    <span className={styles.divider}>|</span>{' '}
                     <span className={styles.job}>Full Stack Web Developer</span>
                 </div>
                 <ThemeSwitch />
@@ -42,10 +69,28 @@ const MobileNav = () => {
                 closable={false}>
                 <div className={styles.mobileNavDrawerBody}>
                     <ul>
-                        <li>About</li>
-                        <li>Skills</li>
-                        <li>Projects</li>
-                        <li>Career</li>
+                        <li
+                            className={active === ABOUT ? styles.active : null}
+                            onClick={() => onNavLinkClick(ABOUT)}>
+                            About
+                        </li>
+                        <li
+                            className={active === SKILLS ? styles.active : null}
+                            onClick={() => onNavLinkClick(SKILLS)}>
+                            Skills
+                        </li>
+                        <li
+                            className={
+                                active === PROJECTS ? styles.active : null
+                            }
+                            onClick={() => onNavLinkClick(PROJECTS)}>
+                            Projects
+                        </li>
+                        <li
+                            className={active === CAREER ? styles.active : null}
+                            onClick={() => onNavLinkClick(CAREER)}>
+                            Career
+                        </li>
                     </ul>
                     <div className={styles.navIcons}>
                         <a

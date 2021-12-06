@@ -1,5 +1,5 @@
 .cardBody {
-    background-color: rgb(22 22 22 / 70%);
+    background-color: var(--card-backgroound);
     border-radius: var(--border-radius);
 
     &:global(.projectCard) {

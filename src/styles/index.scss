@@ -21,8 +21,8 @@ body {
     opacity: 0 !important;
 }
 
-.mobileNavDrawer {
-    height: calc(100% - 2.5rem) !important;
+.ant-drawer-open.mobileNavDrawer {
+    height: calc(100% - 5rem) !important;
 
     .ant-drawer-content-wrapper {
         height: 100% !important;
@@ -42,7 +42,7 @@ main {
 
     @media screen and (max-width: 768px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 2.5rem 1fr;
+        grid-template-rows: 5rem 1fr;
     }
 }
 
@@ -51,8 +51,24 @@ a {
 }
 
 .resumeModal {
-    background-color: white;
+    // background-color: white;
     padding-bottom: 0;
+
+    svg {
+        color: var(--primary-text);
+    }
+
+    .ant-modal-header {
+        background-color: var(--main-background);
+        .ant-modal-title {
+            color: var(--primary-text);
+        }
+    }
+
+    .ant-modal-body {
+        background-color: var(--main-background);
+        color: var(--primary-text);
+    }
 
     img {
         width: 100%;
@@ -78,8 +94,13 @@ a {
         }
     }
 
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 768px) {
         max-width: 100%;
         padding: 0 1rem;
+
+        .ant-popover-inner-content {
+            max-height: 50vh;
+            overflow: auto;
+        }
     }
 }

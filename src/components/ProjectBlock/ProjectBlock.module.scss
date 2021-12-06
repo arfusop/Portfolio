@@ -8,6 +8,7 @@
     p {
         font-size: 1.2rem;
         line-height: 26px;
+        color: var(--primary-text);
     }
     .zoomOverImage {
         text-align: center;
@@ -21,10 +22,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
-        // img {
-        //     max-width: 30vw;
-        // }
     }
 
     .footer {
@@ -46,9 +43,7 @@
         }
     }
 
-    @media screen and (max-width: 700px) {
-        padding: var(--mobile-page-margin);
-
+    @media screen and (max-width: 768px) {
         .footer {
             display: grid;
             grid-template-columns: 50% 2rem;
