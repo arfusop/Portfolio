@@ -11,22 +11,20 @@
 [data-theme='DARK'] {
     --primary-text: #fff;
 
-    --card-backgroound: rgba(22, 22, 22, 70%);
+    --card-background: rgba(22, 22, 22, 70%);
     --accent-background: #161616;
     --main-background: #222222;
     --secondary-background: #2a2a2a;
     --box-shadow: #000;
-    --base-font-color: #fff;
     --grayscale: grayscale(100%);
 }
 [data-theme='LIGHT'] {
     --primary-text: #0b0b0b;
 
-    --card-backgroound: rgb(169 165 165 / 70%);
+    --card-background: rgb(255 255 255 / 70%);
     --accent-background: #fff;
     --main-background: darkgray;
     --secondary-background: #dfdfdf;
     --box-shadow: #000;
-    --base-font-color: #fff;
     --grayscale: grayscale(0%);
 }

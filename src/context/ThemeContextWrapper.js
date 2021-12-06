@@ -7,7 +7,8 @@ const ThemeContextWrapper = ({ children }) => {
     const [currentTheme, setCurrentTheme] = useState(DARK)
 
     useEffect(() => {
-        const localStorageTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY)
+        const localStorageTheme =
+            localStorage.getItem(LOCAL_STORAGE_THEME_KEY) ?? DARK
         if (localStorageTheme) {
             setCurrentTheme(localStorageTheme)
             document

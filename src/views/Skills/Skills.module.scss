@@ -35,7 +35,7 @@
     :global(.ant-card) {
         box-shadow: 0px 11px 34px 2px var(--box-shadow);
         text-align: center;
-        background-color: black;
+        background-color: var(--card-background);
         border-radius: var(--border-radius);
         transition-duration: 0.7s;
 
@@ -45,8 +45,11 @@
         }
 
         :global(.ant-card-head) {
-            color: var(--base-font-color);
+            color: var(--primary-text);
+            border-color: var(--primary-text);
             font-weight: bolder;
+            width: 80vw;
+            margin: auto;
 
             :global(.ant-card-head-title) {
                 padding: 0;
@@ -69,7 +72,7 @@
             height: calc(100% - 48px);
 
             span {
-                color: var(--base-font-color);
+                color: var(--primary-text);
             }
         }
     }
@@ -90,7 +93,7 @@
         .skillsGrid {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(6, 25vh);
-            grid-gap: 1rem;
+            grid-gap: 2rem;
         }
     }
 }
