@@ -1,15 +1,15 @@
+$asset: '../../assets/mountains.jpg';
+$ideas: '../../assets/ideas.jpeg';
+$laptop: '../../assets/laptop.jpeg';
+
 .About {
     height: 100%;
     padding: var(--page-margin);
-    background-color: var(--secondary-background);
-    // background-image: -webkit-gradient(
-    //     linear,
-    //     left top,
-    //     left bottom,
-    //     from(#fafafa),
-    //     to(#fafafa)
-    // );
-    // background-image: linear-gradient(180deg, #fafafa, #fafafa);
+    background-image: url($laptop);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 
     h1 {
         font-size: 2rem;
@@ -61,6 +61,8 @@
     .contactButton {
         max-width: 15rem;
         width: 70%;
+        height: 3rem;
+        font-size: 1.5rem;
     }
 
     @media screen and (max-width: 950px) {

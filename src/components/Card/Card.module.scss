@@ -1,0 +1,43 @@
+.cardBody {
+    background-color: rgb(22 22 22 / 70%);
+    border-radius: var(--border-radius);
+
+    &:global(.projectCard) {
+        :global(.ant-card-head) {
+            border: none;
+        }
+
+        :global(.ant-card-head-wrapper) {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid white;
+        }
+
+        :global(.projectTitle) {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h4 {
+                color: var(--primary-text);
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+
+            svg {
+                color: var(--primary-text);
+            }
+        }
+
+        :global(.carouselDots) {
+            li {
+                background-color: var(--accent-background);
+
+                &:global(.slick-active > button) {
+                    background-color: var(--accent);
+                }
+            }
+        }
+    }
+}

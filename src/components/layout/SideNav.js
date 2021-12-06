@@ -7,6 +7,7 @@ import { ScrollContext } from '../../context/ScrollContextWrapper'
 import { CAREER, PROJECTS, SKILLS, ABOUT } from '../../utils/constants'
 import ResumePdf from '../../assets/Phil Arfuso’s Resume.pdf'
 import ResumeJpg from '../../assets/Phil Arfuso’s Resume.jpg'
+import ProfileEdited from '../../assets/profile-edited-taller.jpg'
 import styles from './layout.module.scss'
 
 const SideNav = () => {
@@ -72,17 +73,22 @@ const SideNav = () => {
                     href="https://twitter.com/Phil_Arfuso"
                     target="_blank"
                     rel="noreferrer">
-                    {' '}
                     <FaTwitter title="Twitter" />
                 </a>
-                <FaFileAlt
-                    onClick={() => {
-                        console.log('wtf')
-                        setIsModalOpen(true)
-                    }}
-                    title="Resume"
-                />
-            </div>{' '}
+                <div>
+                    <FaFileAlt
+                        onClick={() => {
+                            console.log('wtf')
+                            setIsModalOpen(true)
+                        }}
+                        title="Resume"
+                    />
+                </div>
+            </div>
+            <img src={ProfileEdited} alt="Profile" />
+            <span className={styles.copyright}>
+                PA © {new Date().getFullYear()}
+            </span>
             <Modal
                 closable
                 mask
