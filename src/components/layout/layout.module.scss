@@ -66,6 +66,22 @@
         }
     }
 
+    .themeToggle {
+        height: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        :global(.ant-switch-inner) {
+            display: flex;
+            align-items: center;
+
+            svg {
+                font-size: 1rem;
+            }
+        }
+    }
+
     .navIcons {
         margin: 3rem;
         display: grid;
@@ -93,9 +109,9 @@
     }
 
     img {
-        filter: grayscale(100%);
+        filter: var(--grayscale);
         border-radius: var(--border-radius);
-        margin: 0 1rem 3rem 1rem;
+        margin: 0 1rem 2rem 1rem;
     }
 
     .copyright {
