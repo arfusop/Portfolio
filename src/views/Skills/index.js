@@ -1,20 +1,4 @@
 import React, { useContext } from 'react'
-import { Progress, Card } from 'antd'
-import {
-    SiJavascript,
-    SiReact,
-    SiCss3,
-    SiSass,
-    SiGatsby,
-    SiNextdotjs,
-    SiNodedotjs,
-    SiGraphql,
-    SiMongodb,
-    SiPostgresql,
-    SiCypress,
-    SiJest
-} from 'react-icons/si'
-import { FaArrowRight } from 'react-icons/fa'
 
 import { SKILLS } from '../../utils/constants'
 import { ScrollContext } from '../../context/ScrollContextWrapper'
@@ -29,63 +13,40 @@ const Skills = () => {
             ref={skills.ref}
             id="skills"
             className={styles.Skills}>
-            <h1>
-                {`Skills.map(skill `}
-                <FaArrowRight />
-                {` {`}
-            </h1>
-            <div className={styles.skillsGrid}>
-                <Card title={<SiJavascript />}>
-                    <Progress percent={85} type="dashboard" />
-                </Card>
-                <Card
-                    title={
-                        <>
-                            <SiReact />
-                            <SiNextdotjs />
-                            <SiGatsby />
-                        </>
-                    }>
-                    <Progress percent={90} type="dashboard" />
-                </Card>
-                <Card
-                    title={
-                        <>
-                            <SiSass />
-                            <SiCss3 />
-                        </>
-                    }>
-                    <Progress percent={95} type="dashboard" />
-                </Card>
-                <Card
-                    title={
-                        <>
-                            <SiNodedotjs />
-                            <SiGraphql />
-                        </>
-                    }>
-                    <Progress percent={65} type="dashboard" />
-                </Card>
-                <Card
-                    title={
-                        <>
-                            <SiMongodb />
-                            <SiPostgresql />
-                        </>
-                    }>
-                    <Progress percent={60} type="dashboard" />
-                </Card>
-                <Card
-                    title={
-                        <>
-                            <SiCypress />
-                            <SiJest />
-                        </>
-                    }>
-                    <Progress percent={45} type="dashboard" />
-                </Card>
+            <h1>Skills & Abilities</h1>
+            <div className={styles.skillSector}>
+                <h2>Front End Tools & Frameworks</h2>
+                <hr />
+                <h3>JavaScript | TypeScript</h3>
+                <ul>
+                    <li>ES6 and beyond</li>
+                </ul>
+                <h3>JS Frameworks</h3>
+                <ul>
+                    <li>React</li>
+                    <li>Next.js</li>
+                </ul>
+                <h3>HTML | CSS</h3>
+                <ul>
+                    <li>SASS</li>
+                    <li>CSS Modules</li>
+                    <li>Styled Components/CSS in JS</li>
+                </ul>
+                <h2>Back End Tools & Frameworks</h2>
+                <hr />
+                <h3>Node | TypeScript</h3>
+                <ul>
+                    <li>Express</li>
+                    <li>Restful APIs</li>
+                    <li>GraphQL APIs</li>
+                    <li>Apollo & Prisma</li>
+                </ul>
+                <h3>Databases</h3>
+                <ul>
+                    <li>MongoDB</li>
+                    <li>PostGres (SQL Based)</li>
+                </ul>
             </div>
-            <h1>{`})`}</h1>
         </section>
     )
 }

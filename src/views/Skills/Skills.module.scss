@@ -5,8 +5,6 @@
     padding: 5rem;
     background-color: var(--secondary-background);
     border-top: 4px solid var(--main-background);
-    display: grid;
-    grid-template-rows: 4rem 1fr;
 
     h1 {
         font-weight: bold;
@@ -22,78 +20,30 @@
         }
     }
 
-    .skillsGrid {
-        height: 100%;
-        display: grid;
-        grid-template-columns: 30% 30% 30%;
-        grid-template-rows: 47% 47%;
-        align-content: space-around;
-        grid-gap: 5%;
-        padding: 2rem 0;
-    }
+    .skillSector {
+        margin-top: 1rem;
 
-    :global(.ant-card) {
-        box-shadow: 0px 11px 34px 2px var(--box-shadow);
-        text-align: center;
-        background-color: var(--card-background);
-        border-radius: var(--border-radius);
-        transition-duration: 0.7s;
-
-        &:hover {
-            box-shadow: unset;
-            transform: translateY(10px);
+        h2 {
+            color: var(--primary-accent);
+            font-size: 1.4rem;
+            font-weight: bold;
         }
 
-        :global(.ant-card-head) {
+        h3 {
+            color: var(--primary-accent);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        ul {
+            list-style: initial;
             color: var(--primary-text);
-            border-color: var(--primary-text);
-            font-weight: bolder;
-            width: 80%;
-            margin: auto;
 
-            :global(.ant-card-head-title) {
-                padding: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 3rem;
-                font-size: 2rem;
-
-                svg {
-                    margin: 0 1rem;
-                }
+            li {
+                margin: 1rem 0;
+                margin-left: 1rem;
             }
-        }
-
-        :global(.ant-card-body) {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: calc(100% - 48px);
-
-            span {
-                color: var(--primary-text);
-            }
-        }
-    }
-
-    @media screen and (max-width: 1100px) {
-        .skillsGrid {
-            grid-template-columns: 47.5% 47.5%;
-            grid-template-rows: 30% 30% 30%;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        @include mobilePagePadding;
-        min-height: 100vh;
-        height: unset;
-        width: 100vw;
-
-        .skillsGrid {
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(6, 25vh);
-            grid-gap: 2rem;
         }
     }
 }
