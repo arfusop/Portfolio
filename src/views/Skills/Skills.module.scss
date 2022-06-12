@@ -1,7 +1,7 @@
 @import '../../styles/mobile-page-styles.scss';
 
 .Skills {
-    height: 100vh;
+    min-height: 100vh;
     padding: 5rem;
     background-color: var(--secondary-background);
     border-top: 4px solid var(--main-background);
